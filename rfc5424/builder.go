@@ -19,7 +19,7 @@ const builderEnProcid int = 40
 const builderEnMsgid int = 41
 const builderEnSdid int = 42
 const builderEnSdpn int = 43
-const builderEnSdpv int = 582
+const builderEnSdpv int = 646
 const builderEnMsg int = 52
 
 type entrypoint int
@@ -1160,8 +1160,6 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 			goto stCase548
 		case 549:
 			goto stCase549
-		case 43:
-			goto stCase43
 		case 550:
 			goto stCase550
 		case 551:
@@ -1226,10 +1224,140 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 			goto stCase580
 		case 581:
 			goto stCase581
+		case 43:
+			goto stCase43
 		case 582:
 			goto stCase582
 		case 583:
 			goto stCase583
+		case 584:
+			goto stCase584
+		case 585:
+			goto stCase585
+		case 586:
+			goto stCase586
+		case 587:
+			goto stCase587
+		case 588:
+			goto stCase588
+		case 589:
+			goto stCase589
+		case 590:
+			goto stCase590
+		case 591:
+			goto stCase591
+		case 592:
+			goto stCase592
+		case 593:
+			goto stCase593
+		case 594:
+			goto stCase594
+		case 595:
+			goto stCase595
+		case 596:
+			goto stCase596
+		case 597:
+			goto stCase597
+		case 598:
+			goto stCase598
+		case 599:
+			goto stCase599
+		case 600:
+			goto stCase600
+		case 601:
+			goto stCase601
+		case 602:
+			goto stCase602
+		case 603:
+			goto stCase603
+		case 604:
+			goto stCase604
+		case 605:
+			goto stCase605
+		case 606:
+			goto stCase606
+		case 607:
+			goto stCase607
+		case 608:
+			goto stCase608
+		case 609:
+			goto stCase609
+		case 610:
+			goto stCase610
+		case 611:
+			goto stCase611
+		case 612:
+			goto stCase612
+		case 613:
+			goto stCase613
+		case 614:
+			goto stCase614
+		case 615:
+			goto stCase615
+		case 616:
+			goto stCase616
+		case 617:
+			goto stCase617
+		case 618:
+			goto stCase618
+		case 619:
+			goto stCase619
+		case 620:
+			goto stCase620
+		case 621:
+			goto stCase621
+		case 622:
+			goto stCase622
+		case 623:
+			goto stCase623
+		case 624:
+			goto stCase624
+		case 625:
+			goto stCase625
+		case 626:
+			goto stCase626
+		case 627:
+			goto stCase627
+		case 628:
+			goto stCase628
+		case 629:
+			goto stCase629
+		case 630:
+			goto stCase630
+		case 631:
+			goto stCase631
+		case 632:
+			goto stCase632
+		case 633:
+			goto stCase633
+		case 634:
+			goto stCase634
+		case 635:
+			goto stCase635
+		case 636:
+			goto stCase636
+		case 637:
+			goto stCase637
+		case 638:
+			goto stCase638
+		case 639:
+			goto stCase639
+		case 640:
+			goto stCase640
+		case 641:
+			goto stCase641
+		case 642:
+			goto stCase642
+		case 643:
+			goto stCase643
+		case 644:
+			goto stCase644
+		case 645:
+			goto stCase645
+		case 646:
+			goto stCase646
+		case 647:
+			goto stCase647
 		case 44:
 			goto stCase44
 		case 45:
@@ -6545,29 +6673,22 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 			goto _testEof549
 		}
 	stCase549:
-		goto st0
-	stCase43:
 		if data[p] == 33 {
-			goto tr43
+			goto st550
 		}
 		switch {
 		case data[p] < 62:
 			if 35 <= data[p] && data[p] <= 60 {
-				goto tr43
+				goto st550
 			}
 		case data[p] > 92:
 			if 94 <= data[p] && data[p] <= 126 {
-				goto tr43
+				goto st550
 			}
 		default:
-			goto tr43
+			goto st550
 		}
 		goto st0
-	tr43:
-
-		pb = p
-
-		goto st550
 	st550:
 		if p++; p == pe {
 			goto _testEof550
@@ -7225,29 +7346,1380 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 		}
 	stCase581:
 		goto st0
+	stCase43:
+		if data[p] == 33 {
+			goto tr43
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto tr43
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto tr43
+			}
+		default:
+			goto tr43
+		}
+		goto st0
+	tr43:
+
+		pb = p
+
+		goto st582
+	st582:
+		if p++; p == pe {
+			goto _testEof582
+		}
 	stCase582:
+		if data[p] == 33 {
+			goto st583
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st583
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st583
+			}
+		default:
+			goto st583
+		}
+		goto st0
+	st583:
+		if p++; p == pe {
+			goto _testEof583
+		}
+	stCase583:
+		if data[p] == 33 {
+			goto st584
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st584
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st584
+			}
+		default:
+			goto st584
+		}
+		goto st0
+	st584:
+		if p++; p == pe {
+			goto _testEof584
+		}
+	stCase584:
+		if data[p] == 33 {
+			goto st585
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st585
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st585
+			}
+		default:
+			goto st585
+		}
+		goto st0
+	st585:
+		if p++; p == pe {
+			goto _testEof585
+		}
+	stCase585:
+		if data[p] == 33 {
+			goto st586
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st586
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st586
+			}
+		default:
+			goto st586
+		}
+		goto st0
+	st586:
+		if p++; p == pe {
+			goto _testEof586
+		}
+	stCase586:
+		if data[p] == 33 {
+			goto st587
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st587
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st587
+			}
+		default:
+			goto st587
+		}
+		goto st0
+	st587:
+		if p++; p == pe {
+			goto _testEof587
+		}
+	stCase587:
+		if data[p] == 33 {
+			goto st588
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st588
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st588
+			}
+		default:
+			goto st588
+		}
+		goto st0
+	st588:
+		if p++; p == pe {
+			goto _testEof588
+		}
+	stCase588:
+		if data[p] == 33 {
+			goto st589
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st589
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st589
+			}
+		default:
+			goto st589
+		}
+		goto st0
+	st589:
+		if p++; p == pe {
+			goto _testEof589
+		}
+	stCase589:
+		if data[p] == 33 {
+			goto st590
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st590
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st590
+			}
+		default:
+			goto st590
+		}
+		goto st0
+	st590:
+		if p++; p == pe {
+			goto _testEof590
+		}
+	stCase590:
+		if data[p] == 33 {
+			goto st591
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st591
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st591
+			}
+		default:
+			goto st591
+		}
+		goto st0
+	st591:
+		if p++; p == pe {
+			goto _testEof591
+		}
+	stCase591:
+		if data[p] == 33 {
+			goto st592
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st592
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st592
+			}
+		default:
+			goto st592
+		}
+		goto st0
+	st592:
+		if p++; p == pe {
+			goto _testEof592
+		}
+	stCase592:
+		if data[p] == 33 {
+			goto st593
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st593
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st593
+			}
+		default:
+			goto st593
+		}
+		goto st0
+	st593:
+		if p++; p == pe {
+			goto _testEof593
+		}
+	stCase593:
+		if data[p] == 33 {
+			goto st594
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st594
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st594
+			}
+		default:
+			goto st594
+		}
+		goto st0
+	st594:
+		if p++; p == pe {
+			goto _testEof594
+		}
+	stCase594:
+		if data[p] == 33 {
+			goto st595
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st595
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st595
+			}
+		default:
+			goto st595
+		}
+		goto st0
+	st595:
+		if p++; p == pe {
+			goto _testEof595
+		}
+	stCase595:
+		if data[p] == 33 {
+			goto st596
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st596
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st596
+			}
+		default:
+			goto st596
+		}
+		goto st0
+	st596:
+		if p++; p == pe {
+			goto _testEof596
+		}
+	stCase596:
+		if data[p] == 33 {
+			goto st597
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st597
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st597
+			}
+		default:
+			goto st597
+		}
+		goto st0
+	st597:
+		if p++; p == pe {
+			goto _testEof597
+		}
+	stCase597:
+		if data[p] == 33 {
+			goto st598
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st598
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st598
+			}
+		default:
+			goto st598
+		}
+		goto st0
+	st598:
+		if p++; p == pe {
+			goto _testEof598
+		}
+	stCase598:
+		if data[p] == 33 {
+			goto st599
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st599
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st599
+			}
+		default:
+			goto st599
+		}
+		goto st0
+	st599:
+		if p++; p == pe {
+			goto _testEof599
+		}
+	stCase599:
+		if data[p] == 33 {
+			goto st600
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st600
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st600
+			}
+		default:
+			goto st600
+		}
+		goto st0
+	st600:
+		if p++; p == pe {
+			goto _testEof600
+		}
+	stCase600:
+		if data[p] == 33 {
+			goto st601
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st601
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st601
+			}
+		default:
+			goto st601
+		}
+		goto st0
+	st601:
+		if p++; p == pe {
+			goto _testEof601
+		}
+	stCase601:
+		if data[p] == 33 {
+			goto st602
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st602
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st602
+			}
+		default:
+			goto st602
+		}
+		goto st0
+	st602:
+		if p++; p == pe {
+			goto _testEof602
+		}
+	stCase602:
+		if data[p] == 33 {
+			goto st603
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st603
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st603
+			}
+		default:
+			goto st603
+		}
+		goto st0
+	st603:
+		if p++; p == pe {
+			goto _testEof603
+		}
+	stCase603:
+		if data[p] == 33 {
+			goto st604
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st604
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st604
+			}
+		default:
+			goto st604
+		}
+		goto st0
+	st604:
+		if p++; p == pe {
+			goto _testEof604
+		}
+	stCase604:
+		if data[p] == 33 {
+			goto st605
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st605
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st605
+			}
+		default:
+			goto st605
+		}
+		goto st0
+	st605:
+		if p++; p == pe {
+			goto _testEof605
+		}
+	stCase605:
+		if data[p] == 33 {
+			goto st606
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st606
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st606
+			}
+		default:
+			goto st606
+		}
+		goto st0
+	st606:
+		if p++; p == pe {
+			goto _testEof606
+		}
+	stCase606:
+		if data[p] == 33 {
+			goto st607
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st607
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st607
+			}
+		default:
+			goto st607
+		}
+		goto st0
+	st607:
+		if p++; p == pe {
+			goto _testEof607
+		}
+	stCase607:
+		if data[p] == 33 {
+			goto st608
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st608
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st608
+			}
+		default:
+			goto st608
+		}
+		goto st0
+	st608:
+		if p++; p == pe {
+			goto _testEof608
+		}
+	stCase608:
+		if data[p] == 33 {
+			goto st609
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st609
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st609
+			}
+		default:
+			goto st609
+		}
+		goto st0
+	st609:
+		if p++; p == pe {
+			goto _testEof609
+		}
+	stCase609:
+		if data[p] == 33 {
+			goto st610
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st610
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st610
+			}
+		default:
+			goto st610
+		}
+		goto st0
+	st610:
+		if p++; p == pe {
+			goto _testEof610
+		}
+	stCase610:
+		if data[p] == 33 {
+			goto st611
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st611
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st611
+			}
+		default:
+			goto st611
+		}
+		goto st0
+	st611:
+		if p++; p == pe {
+			goto _testEof611
+		}
+	stCase611:
+		if data[p] == 33 {
+			goto st612
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st612
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st612
+			}
+		default:
+			goto st612
+		}
+		goto st0
+	st612:
+		if p++; p == pe {
+			goto _testEof612
+		}
+	stCase612:
+		if data[p] == 33 {
+			goto st613
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st613
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st613
+			}
+		default:
+			goto st613
+		}
+		goto st0
+	st613:
+		if p++; p == pe {
+			goto _testEof613
+		}
+	stCase613:
+		if data[p] == 33 {
+			goto st614
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st614
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st614
+			}
+		default:
+			goto st614
+		}
+		goto st0
+	st614:
+		if p++; p == pe {
+			goto _testEof614
+		}
+	stCase614:
+		if data[p] == 33 {
+			goto st615
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st615
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st615
+			}
+		default:
+			goto st615
+		}
+		goto st0
+	st615:
+		if p++; p == pe {
+			goto _testEof615
+		}
+	stCase615:
+		if data[p] == 33 {
+			goto st616
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st616
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st616
+			}
+		default:
+			goto st616
+		}
+		goto st0
+	st616:
+		if p++; p == pe {
+			goto _testEof616
+		}
+	stCase616:
+		if data[p] == 33 {
+			goto st617
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st617
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st617
+			}
+		default:
+			goto st617
+		}
+		goto st0
+	st617:
+		if p++; p == pe {
+			goto _testEof617
+		}
+	stCase617:
+		if data[p] == 33 {
+			goto st618
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st618
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st618
+			}
+		default:
+			goto st618
+		}
+		goto st0
+	st618:
+		if p++; p == pe {
+			goto _testEof618
+		}
+	stCase618:
+		if data[p] == 33 {
+			goto st619
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st619
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st619
+			}
+		default:
+			goto st619
+		}
+		goto st0
+	st619:
+		if p++; p == pe {
+			goto _testEof619
+		}
+	stCase619:
+		if data[p] == 33 {
+			goto st620
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st620
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st620
+			}
+		default:
+			goto st620
+		}
+		goto st0
+	st620:
+		if p++; p == pe {
+			goto _testEof620
+		}
+	stCase620:
+		if data[p] == 33 {
+			goto st621
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st621
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st621
+			}
+		default:
+			goto st621
+		}
+		goto st0
+	st621:
+		if p++; p == pe {
+			goto _testEof621
+		}
+	stCase621:
+		if data[p] == 33 {
+			goto st622
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st622
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st622
+			}
+		default:
+			goto st622
+		}
+		goto st0
+	st622:
+		if p++; p == pe {
+			goto _testEof622
+		}
+	stCase622:
+		if data[p] == 33 {
+			goto st623
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st623
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st623
+			}
+		default:
+			goto st623
+		}
+		goto st0
+	st623:
+		if p++; p == pe {
+			goto _testEof623
+		}
+	stCase623:
+		if data[p] == 33 {
+			goto st624
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st624
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st624
+			}
+		default:
+			goto st624
+		}
+		goto st0
+	st624:
+		if p++; p == pe {
+			goto _testEof624
+		}
+	stCase624:
+		if data[p] == 33 {
+			goto st625
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st625
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st625
+			}
+		default:
+			goto st625
+		}
+		goto st0
+	st625:
+		if p++; p == pe {
+			goto _testEof625
+		}
+	stCase625:
+		if data[p] == 33 {
+			goto st626
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st626
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st626
+			}
+		default:
+			goto st626
+		}
+		goto st0
+	st626:
+		if p++; p == pe {
+			goto _testEof626
+		}
+	stCase626:
+		if data[p] == 33 {
+			goto st627
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st627
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st627
+			}
+		default:
+			goto st627
+		}
+		goto st0
+	st627:
+		if p++; p == pe {
+			goto _testEof627
+		}
+	stCase627:
+		if data[p] == 33 {
+			goto st628
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st628
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st628
+			}
+		default:
+			goto st628
+		}
+		goto st0
+	st628:
+		if p++; p == pe {
+			goto _testEof628
+		}
+	stCase628:
+		if data[p] == 33 {
+			goto st629
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st629
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st629
+			}
+		default:
+			goto st629
+		}
+		goto st0
+	st629:
+		if p++; p == pe {
+			goto _testEof629
+		}
+	stCase629:
+		if data[p] == 33 {
+			goto st630
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st630
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st630
+			}
+		default:
+			goto st630
+		}
+		goto st0
+	st630:
+		if p++; p == pe {
+			goto _testEof630
+		}
+	stCase630:
+		if data[p] == 33 {
+			goto st631
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st631
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st631
+			}
+		default:
+			goto st631
+		}
+		goto st0
+	st631:
+		if p++; p == pe {
+			goto _testEof631
+		}
+	stCase631:
+		if data[p] == 33 {
+			goto st632
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st632
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st632
+			}
+		default:
+			goto st632
+		}
+		goto st0
+	st632:
+		if p++; p == pe {
+			goto _testEof632
+		}
+	stCase632:
+		if data[p] == 33 {
+			goto st633
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st633
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st633
+			}
+		default:
+			goto st633
+		}
+		goto st0
+	st633:
+		if p++; p == pe {
+			goto _testEof633
+		}
+	stCase633:
+		if data[p] == 33 {
+			goto st634
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st634
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st634
+			}
+		default:
+			goto st634
+		}
+		goto st0
+	st634:
+		if p++; p == pe {
+			goto _testEof634
+		}
+	stCase634:
+		if data[p] == 33 {
+			goto st635
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st635
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st635
+			}
+		default:
+			goto st635
+		}
+		goto st0
+	st635:
+		if p++; p == pe {
+			goto _testEof635
+		}
+	stCase635:
+		if data[p] == 33 {
+			goto st636
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st636
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st636
+			}
+		default:
+			goto st636
+		}
+		goto st0
+	st636:
+		if p++; p == pe {
+			goto _testEof636
+		}
+	stCase636:
+		if data[p] == 33 {
+			goto st637
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st637
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st637
+			}
+		default:
+			goto st637
+		}
+		goto st0
+	st637:
+		if p++; p == pe {
+			goto _testEof637
+		}
+	stCase637:
+		if data[p] == 33 {
+			goto st638
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st638
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st638
+			}
+		default:
+			goto st638
+		}
+		goto st0
+	st638:
+		if p++; p == pe {
+			goto _testEof638
+		}
+	stCase638:
+		if data[p] == 33 {
+			goto st639
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st639
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st639
+			}
+		default:
+			goto st639
+		}
+		goto st0
+	st639:
+		if p++; p == pe {
+			goto _testEof639
+		}
+	stCase639:
+		if data[p] == 33 {
+			goto st640
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st640
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st640
+			}
+		default:
+			goto st640
+		}
+		goto st0
+	st640:
+		if p++; p == pe {
+			goto _testEof640
+		}
+	stCase640:
+		if data[p] == 33 {
+			goto st641
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st641
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st641
+			}
+		default:
+			goto st641
+		}
+		goto st0
+	st641:
+		if p++; p == pe {
+			goto _testEof641
+		}
+	stCase641:
+		if data[p] == 33 {
+			goto st642
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st642
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st642
+			}
+		default:
+			goto st642
+		}
+		goto st0
+	st642:
+		if p++; p == pe {
+			goto _testEof642
+		}
+	stCase642:
+		if data[p] == 33 {
+			goto st643
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st643
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st643
+			}
+		default:
+			goto st643
+		}
+		goto st0
+	st643:
+		if p++; p == pe {
+			goto _testEof643
+		}
+	stCase643:
+		if data[p] == 33 {
+			goto st644
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st644
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st644
+			}
+		default:
+			goto st644
+		}
+		goto st0
+	st644:
+		if p++; p == pe {
+			goto _testEof644
+		}
+	stCase644:
+		if data[p] == 33 {
+			goto st645
+		}
+		switch {
+		case data[p] < 62:
+			if 35 <= data[p] && data[p] <= 60 {
+				goto st645
+			}
+		case data[p] > 92:
+			if 94 <= data[p] && data[p] <= 126 {
+				goto st645
+			}
+		default:
+			goto st645
+		}
+		goto st0
+	st645:
+		if p++; p == pe {
+			goto _testEof645
+		}
+	stCase645:
+		goto st0
+	stCase646:
 		switch data[p] {
 		case 34:
 			goto st0
 		case 92:
-			goto tr571
+			goto tr635
 		case 93:
 			goto st0
 		case 224:
-			goto tr573
+			goto tr637
 		case 237:
-			goto tr575
+			goto tr639
 		case 240:
-			goto tr576
+			goto tr640
 		case 244:
-			goto tr578
+			goto tr642
 		}
 		switch {
 		case data[p] < 225:
 			switch {
 			case data[p] > 193:
 				if 194 <= data[p] && data[p] <= 223 {
-					goto tr572
+					goto tr636
 				}
 			case data[p] >= 128:
 				goto st0
@@ -7259,27 +8731,27 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 					goto st0
 				}
 			case data[p] >= 241:
-				goto tr577
+				goto tr641
 			}
 		default:
-			goto tr574
+			goto tr638
 		}
-		goto tr570
-	tr570:
+		goto tr634
+	tr634:
 
 		pb = p
 
-		goto st583
-	st583:
+		goto st647
+	st647:
 		if p++; p == pe {
-			goto _testEof583
+			goto _testEof647
 		}
-	stCase583:
+	stCase647:
 		switch data[p] {
 		case 34:
 			goto st0
 		case 92:
-			goto tr579
+			goto tr643
 		case 93:
 			goto st0
 		case 224:
@@ -7313,15 +8785,15 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 		default:
 			goto st47
 		}
-		goto st583
-	tr571:
+		goto st647
+	tr635:
 
 		pb = p
 
 		backslashes = append(backslashes, p)
 
 		goto st44
-	tr579:
+	tr643:
 
 		backslashes = append(backslashes, p)
 
@@ -7332,13 +8804,13 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 		}
 	stCase44:
 		if data[p] == 34 {
-			goto st583
+			goto st647
 		}
 		if 92 <= data[p] && data[p] <= 93 {
-			goto st583
+			goto st647
 		}
 		goto st0
-	tr572:
+	tr636:
 
 		pb = p
 
@@ -7349,10 +8821,10 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 		}
 	stCase45:
 		if 128 <= data[p] && data[p] <= 191 {
-			goto st583
+			goto st647
 		}
 		goto st0
-	tr573:
+	tr637:
 
 		pb = p
 
@@ -7366,7 +8838,7 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 			goto st45
 		}
 		goto st0
-	tr574:
+	tr638:
 
 		pb = p
 
@@ -7380,7 +8852,7 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 			goto st45
 		}
 		goto st0
-	tr575:
+	tr639:
 
 		pb = p
 
@@ -7394,7 +8866,7 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 			goto st45
 		}
 		goto st0
-	tr576:
+	tr640:
 
 		pb = p
 
@@ -7408,7 +8880,7 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 			goto st47
 		}
 		goto st0
-	tr577:
+	tr641:
 
 		pb = p
 
@@ -7422,7 +8894,7 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 			goto st47
 		}
 		goto st0
-	tr578:
+	tr642:
 
 		pb = p
 
@@ -9132,8 +10604,200 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 	_testEof581:
 		cs = 581
 		goto _testEof
+	_testEof582:
+		cs = 582
+		goto _testEof
 	_testEof583:
 		cs = 583
+		goto _testEof
+	_testEof584:
+		cs = 584
+		goto _testEof
+	_testEof585:
+		cs = 585
+		goto _testEof
+	_testEof586:
+		cs = 586
+		goto _testEof
+	_testEof587:
+		cs = 587
+		goto _testEof
+	_testEof588:
+		cs = 588
+		goto _testEof
+	_testEof589:
+		cs = 589
+		goto _testEof
+	_testEof590:
+		cs = 590
+		goto _testEof
+	_testEof591:
+		cs = 591
+		goto _testEof
+	_testEof592:
+		cs = 592
+		goto _testEof
+	_testEof593:
+		cs = 593
+		goto _testEof
+	_testEof594:
+		cs = 594
+		goto _testEof
+	_testEof595:
+		cs = 595
+		goto _testEof
+	_testEof596:
+		cs = 596
+		goto _testEof
+	_testEof597:
+		cs = 597
+		goto _testEof
+	_testEof598:
+		cs = 598
+		goto _testEof
+	_testEof599:
+		cs = 599
+		goto _testEof
+	_testEof600:
+		cs = 600
+		goto _testEof
+	_testEof601:
+		cs = 601
+		goto _testEof
+	_testEof602:
+		cs = 602
+		goto _testEof
+	_testEof603:
+		cs = 603
+		goto _testEof
+	_testEof604:
+		cs = 604
+		goto _testEof
+	_testEof605:
+		cs = 605
+		goto _testEof
+	_testEof606:
+		cs = 606
+		goto _testEof
+	_testEof607:
+		cs = 607
+		goto _testEof
+	_testEof608:
+		cs = 608
+		goto _testEof
+	_testEof609:
+		cs = 609
+		goto _testEof
+	_testEof610:
+		cs = 610
+		goto _testEof
+	_testEof611:
+		cs = 611
+		goto _testEof
+	_testEof612:
+		cs = 612
+		goto _testEof
+	_testEof613:
+		cs = 613
+		goto _testEof
+	_testEof614:
+		cs = 614
+		goto _testEof
+	_testEof615:
+		cs = 615
+		goto _testEof
+	_testEof616:
+		cs = 616
+		goto _testEof
+	_testEof617:
+		cs = 617
+		goto _testEof
+	_testEof618:
+		cs = 618
+		goto _testEof
+	_testEof619:
+		cs = 619
+		goto _testEof
+	_testEof620:
+		cs = 620
+		goto _testEof
+	_testEof621:
+		cs = 621
+		goto _testEof
+	_testEof622:
+		cs = 622
+		goto _testEof
+	_testEof623:
+		cs = 623
+		goto _testEof
+	_testEof624:
+		cs = 624
+		goto _testEof
+	_testEof625:
+		cs = 625
+		goto _testEof
+	_testEof626:
+		cs = 626
+		goto _testEof
+	_testEof627:
+		cs = 627
+		goto _testEof
+	_testEof628:
+		cs = 628
+		goto _testEof
+	_testEof629:
+		cs = 629
+		goto _testEof
+	_testEof630:
+		cs = 630
+		goto _testEof
+	_testEof631:
+		cs = 631
+		goto _testEof
+	_testEof632:
+		cs = 632
+		goto _testEof
+	_testEof633:
+		cs = 633
+		goto _testEof
+	_testEof634:
+		cs = 634
+		goto _testEof
+	_testEof635:
+		cs = 635
+		goto _testEof
+	_testEof636:
+		cs = 636
+		goto _testEof
+	_testEof637:
+		cs = 637
+		goto _testEof
+	_testEof638:
+		cs = 638
+		goto _testEof
+	_testEof639:
+		cs = 639
+		goto _testEof
+	_testEof640:
+		cs = 640
+		goto _testEof
+	_testEof641:
+		cs = 641
+		goto _testEof
+	_testEof642:
+		cs = 642
+		goto _testEof
+	_testEof643:
+		cs = 643
+		goto _testEof
+	_testEof644:
+		cs = 644
+		goto _testEof
+	_testEof645:
+		cs = 645
+		goto _testEof
+	_testEof647:
+		cs = 647
 		goto _testEof
 	_testEof44:
 		cs = 44
@@ -9195,7 +10859,7 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 					sm.MsgID = &s
 				}
 
-			case 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549:
+			case 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578, 579, 580, 581:
 
 				if sm.StructuredData == nil {
 					sm.StructuredData = &(map[string]map[string]string{})
@@ -9207,13 +10871,13 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 					elements[id] = map[string]string{}
 				}
 
-			case 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578, 579, 580, 581:
+			case 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645:
 
 				// Assuming SD map already exists, contains currentid key (set from outside)
 				elements := *sm.StructuredData
 				elements[currentid][string(data[pb:p])] = ""
 
-			case 583:
+			case 647:
 
 				// Store text
 				text := data[pb:p]
@@ -9231,7 +10895,7 @@ func (sm *SyslogMessage) set(from entrypoint, value string) *SyslogMessage {
 					sm.Message = &s
 				}
 
-			case 582:
+			case 646:
 
 				pb = p
 

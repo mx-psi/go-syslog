@@ -1,6 +1,7 @@
 package rfc5424
 
 import (
+	"strconv"
 	"testing"
 
 	"github.com/influxdata/go-syslog/v3"
@@ -19,9 +20,9 @@ func TestParserBestEffortOption(t *testing.T) {
 func TestParserParse(t *testing.T) {
 	p := NewParser()
 	pBest := NewParser(WithBestEffort())
-	for _, tc := range testCases {
+	for i, tc := range testCases {
 		tc := tc
-		t.Run(syslogtesting.RightPad(string(tc.input), 50), func(t *testing.T) {
+		t.Run(strconv.Itoa(i)+syslogtesting.RightPad(string(tc.input), 50), func(t *testing.T) {
 			t.Parallel()
 
 			message, merr := p.Parse(tc.input)

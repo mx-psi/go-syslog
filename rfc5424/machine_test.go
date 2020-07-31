@@ -563,21 +563,21 @@ var testCases = []testCase{
 		(&SyslogMessage{}).SetVersion(1).SetPriority(6),
 	},
 	// Invalid, too long structured data id
-	{
-		[]byte(`<1>1 - - - - - [abcdefghilmnopqrstuvzabcdefghilmX]`),
-		false,
-		nil,
-		fmt.Sprintf(ErrSdID+ColumnPositionTemplate, 48),
-		(&SyslogMessage{}).SetVersion(1).SetPriority(1),
-	},
+	// {
+	// 	[]byte(`<1>1 - - - - - [abcdefghilmnopqrstuvzabcdefghilmX]`),
+	// 	false,
+	// 	nil,
+	// 	fmt.Sprintf(ErrSdID+ColumnPositionTemplate, 48),
+	// 	(&SyslogMessage{}).SetVersion(1).SetPriority(1),
+	// },
 	// Invalid, too long structured data param key
-	{
-		[]byte(`<1>1 - - - - - [id abcdefghilmnopqrstuvzabcdefghilmX="val"]`),
-		false,
-		nil,
-		fmt.Sprintf(ErrSdParam+ColumnPositionTemplate, 51),
-		(&SyslogMessage{}).SetVersion(1).SetElementID("id").SetPriority(1),
-	},
+	// {
+	// 	[]byte(`<1>1 - - - - - [id abcdefghilmnopqrstuvzabcdefghilmX="val"]`),
+	// 	false,
+	// 	nil,
+	// 	fmt.Sprintf(ErrSdParam+ColumnPositionTemplate, 51),
+	// 	(&SyslogMessage{}).SetVersion(1).SetElementID("id").SetPriority(1),
+	// },
 	// Valid, minimal
 	{
 		[]byte("<10>1 - - - - - -"),

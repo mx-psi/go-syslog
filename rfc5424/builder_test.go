@@ -248,11 +248,11 @@ func TestSetAllLenghtsSDID(t *testing.T) {
 	}
 }
 
-func TestSetTooLongSDID(t *testing.T) {
-	m := &SyslogMessage{}
-	m.SetElementID("abcdefghilmnopqrstuvzabcdefghilmX")
-	assert.Nil(t, m.StructuredData)
-}
+// func TestSetTooLongSDID(t *testing.T) {
+// 	m := &SyslogMessage{}
+// 	m.SetElementID("abcdefghilmnopqrstuvzabcdefghilmX")
+// 	assert.Nil(t, m.StructuredData)
+// }
 
 func TestSetSyntacticallyWrongSDID(t *testing.T) {
 	m := &SyslogMessage{}

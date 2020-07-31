@@ -70,7 +70,7 @@ procidrange = graph{1,128};
 
 msgidrange = graph{1,32};
 
-sdname = (graph - ('=' | sp | csb | dq)){1,32};
+sdname = (graph - ('=' | sp | csb | dq)){1,64};
 
 # rfc 3629
 utf8tail = 0x80..0xBF;
