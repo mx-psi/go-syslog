@@ -6,8 +6,8 @@ import (
 	"testing"
 	"unicode/utf8"
 
-	"github.com/influxdata/go-syslog/v3"
-	syslogtesting "github.com/influxdata/go-syslog/v3/testing"
+	"github.com/observiq/go-syslog/v3"
+	syslogtesting "github.com/observiq/go-syslog/v3/testing"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/text/encoding/charmap"
 )
