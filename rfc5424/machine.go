@@ -2,6 +2,7 @@ package rfc5424
 
 import (
 	"fmt"
+	"math"
 	"time"
 
 	"github.com/observiq/go-syslog/v3"
@@ -13,11 +14,11 @@ var ColumnPositionTemplate = " [col %d]"
 
 const (
 	// ErrPrival represents an error in the priority value (PRIVAL) inside the PRI part of the RFC5424 syslog message.
-	ErrPrival = "expecting a priority value in the range 1-191 or equal to 0"
+	ErrPrival = "expecting a priority value in the range 1-255 or equal to 0"
 	// ErrPri represents an error in the PRI part of the RFC5424 syslog message.
 	ErrPri = "expecting a priority value within angle brackets"
 	// ErrVersion represents an error in the VERSION part of the RFC5424 syslog message.
-	ErrVersion = "expecting a version value in the range 1-999"
+	ErrVersion = "expecting a version value in the range 0-%d"
 	// ErrTimestamp represents an error in the TIMESTAMP part of the RFC5424 syslog message.
 	ErrTimestamp = "expecting a RFC3339MICRO timestamp or a nil value"
 	// ErrHostname represents an error in the HOSTNAME part of the RFC5424 syslog message.
@@ -111,6 +112,8 @@ func (m *machine) text() []byte {
 // It can also partially parse input messages returning a partially valid structured representation
 // and the error that stopped the parsing.
 func (m *machine) Parse(input []byte) (syslog.Message, error) {
+	test := math.MaxUint32
+
 	m.data = input
 	m.p = 0
 	m.pb = 0
@@ -1450,8 +1453,6 @@ func (m *machine) Parse(input []byte) (syslog.Message, error) {
 			goto stCase654
 		case 655:
 			goto stCase655
-		case 656:
-			goto stCase656
 		case 657:
 			goto stCase657
 		case 658:
@@ -1531,7 +1532,7 @@ func (m *machine) Parse(input []byte) (syslog.Message, error) {
 		goto st0
 	tr7:
 
-		m.err = fmt.Errorf(ErrVersion+ColumnPositionTemplate, m.p)
+		m.err = fmt.Errorf(ErrVersion+ColumnPositionTemplate, math.MaxUint16, m.p)
 		(m.p)--
 
 		{
@@ -1834,21 +1835,14 @@ func (m *machine) Parse(input []byte) (syslog.Message, error) {
 			goto _testEof2
 		}
 	stCase2:
-		switch (m.data)[(m.p)] {
-		case 48:
-			goto tr3
-		case 49:
-			goto tr4
+		if (m.data)[(m.p)] == 62 {
+			goto st4
 		}
-		if 50 <= (m.data)[(m.p)] && (m.data)[(m.p)] <= 57 {
+
+		if 48 <= (m.data)[(m.p)] && (m.data)[(m.p)] <= 57 {
 			goto tr5
 		}
 		goto tr2
-	tr3:
-
-		m.pb = m.p
-
-		goto st3
 	st3:
 		if (m.p)++; (m.p) == (m.pe) {
 			goto _testEof3
@@ -1867,7 +1861,7 @@ func (m *machine) Parse(input []byte) (syslog.Message, error) {
 			goto _testEof4
 		}
 	stCase4:
-		if 49 <= (m.data)[(m.p)] && (m.data)[(m.p)] <= 57 {
+		if 48 <= (m.data)[(m.p)] && (m.data)[(m.p)] <= 57 {
 			goto tr8
 		}
 		goto tr7
@@ -11053,37 +11047,20 @@ func (m *machine) Parse(input []byte) (syslog.Message, error) {
 			goto _testEof655
 		}
 	stCase655:
-
+		test = common.UnsafeUTF8DecimalCodePointsToInt(m.text())
 		output.version = uint16(common.UnsafeUTF8DecimalCodePointsToInt(m.text()))
+
+		if test > math.MaxUint16 {
+			goto tr7
+		}
 
 		if (m.data)[(m.p)] == 32 {
 			goto st6
 		}
 		if 48 <= (m.data)[(m.p)] && (m.data)[(m.p)] <= 57 {
-			goto st656
+			goto st655
 		}
 		goto tr7
-	st656:
-		if (m.p)++; (m.p) == (m.pe) {
-			goto _testEof656
-		}
-	stCase656:
-
-		output.version = uint16(common.UnsafeUTF8DecimalCodePointsToInt(m.text()))
-
-		if (m.data)[(m.p)] == 32 {
-			goto st6
-		}
-		goto tr7
-	tr4:
-
-		m.pb = m.p
-
-		goto st657
-	st657:
-		if (m.p)++; (m.p) == (m.pe) {
-			goto _testEof657
-		}
 	stCase657:
 
 		output.priority = uint8(common.UnsafeUTF8DecimalCodePointsToInt(m.text()))
@@ -11109,15 +11086,19 @@ func (m *machine) Parse(input []byte) (syslog.Message, error) {
 			goto _testEof658
 		}
 	stCase658:
-
+		test = common.UnsafeUTF8DecimalCodePointsToInt(m.text())
 		output.priority = uint8(common.UnsafeUTF8DecimalCodePointsToInt(m.text()))
 		output.prioritySet = true
+
+		if test > math.MaxUint8 {
+			goto tr2
+		}
 
 		if (m.data)[(m.p)] == 62 {
 			goto st4
 		}
 		if 48 <= (m.data)[(m.p)] && (m.data)[(m.p)] <= 57 {
-			goto st3
+			goto st658
 		}
 		goto tr2
 	st659:
@@ -13289,12 +13270,6 @@ func (m *machine) Parse(input []byte) (syslog.Message, error) {
 		goto _testEof
 	_testEof655:
 		m.cs = 655
-		goto _testEof
-	_testEof656:
-		m.cs = 656
-		goto _testEof
-	_testEof657:
-		m.cs = 657
 		goto _testEof
 	_testEof658:
 		m.cs = 658
