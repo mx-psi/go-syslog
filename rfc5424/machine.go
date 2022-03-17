@@ -112,7 +112,7 @@ func (m *machine) text() []byte {
 // It can also partially parse input messages returning a partially valid structured representation
 // and the error that stopped the parsing.
 func (m *machine) Parse(input []byte) (syslog.Message, error) {
-	test := math.MaxUint32
+	var test uint32 = math.MaxUint32
 
 	m.data = input
 	m.p = 0
@@ -11047,7 +11047,7 @@ func (m *machine) Parse(input []byte) (syslog.Message, error) {
 			goto _testEof655
 		}
 	stCase655:
-		test = common.UnsafeUTF8DecimalCodePointsToInt(m.text())
+		test = uint32(common.UnsafeUTF8DecimalCodePointsToInt(m.text()))
 		output.version = uint16(common.UnsafeUTF8DecimalCodePointsToInt(m.text()))
 
 		if test > math.MaxUint16 {
@@ -11086,7 +11086,7 @@ func (m *machine) Parse(input []byte) (syslog.Message, error) {
 			goto _testEof658
 		}
 	stCase658:
-		test = common.UnsafeUTF8DecimalCodePointsToInt(m.text())
+		test = uint32(common.UnsafeUTF8DecimalCodePointsToInt(m.text()))
 		output.priority = uint8(common.UnsafeUTF8DecimalCodePointsToInt(m.text()))
 		output.prioritySet = true
 
